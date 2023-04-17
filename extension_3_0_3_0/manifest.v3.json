@@ -1,0 +1,31 @@
+{
+  "name": "ChatGPT Google Extension",
+  "version": "1.0",
+  "description": "An AI-powered chatbot for Google search results.",
+  "manifest_version": 2,
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://spse.gq/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ]
+}
